@@ -59,9 +59,13 @@ let contract = new web3.eth.Contract(
   "0xcc11Dbcf477656C4440fC0a3d38353158bf16E20"
 );
 
-console.log(
-  contract.methods
-    .x()
-    .call()
-    .then((result) => console.log(result))
-);
+contract.methods
+  .set(90)
+  .send({ from: "0x48b945d91A15b9247B8EBe12a285471bc7cCF554" });
+
+let newVal = contract.methods
+  .x()
+  .call()
+  .then((result) => console.log(result));
+
+console.log(newVal);
