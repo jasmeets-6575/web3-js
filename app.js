@@ -68,4 +68,4 @@ let newVal = contract.methods
   .call()
   .then((result) => console.log(result));
 
-console.log(newVal);
+// console.log(newVal);
